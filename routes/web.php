@@ -15,6 +15,7 @@ Route::put('/posts/{post}', 'PostsController@update');
 Route::delete('/posts/{post}', 'PostsController@destroy');
 
 
+Route::get('/posts/{post}/comments', 'CommentsController@fetchComments');
 
 Route::post('/posts/{post}/comments', 'CommentsController@store');
 

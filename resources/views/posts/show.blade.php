@@ -25,6 +25,8 @@
 
 		<hr>
 
+		<!--
+
 		<div class="comments">
 
 			<ul class="list-group">
@@ -70,7 +72,28 @@
 			</div>
 			
 		</div>
+	-->
 
+
+	<div class="container">
+    <div class="row">
+        <div class="col-md-8 col-md-offset-2">
+            <div class="panel panel-default">
+                <div class="panel-heading">Comments</div>
+
+                <div class="panel-body">
+                    <post-comments :comments="comments"></post-comments>
+                </div>
+                <div class="panel-footer">
+                    <comment-form
+                        v-on:commentsent="sendComment"
+                        :user="{{ Auth::user() }}"
+                    ></comment-form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
 		
 	</div>
 
